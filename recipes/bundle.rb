@@ -19,6 +19,18 @@
 # limitations under the License.
 #
 
+#
+# Install Formulas
+#
 node["homebrew"]["formulas"].each do |f|
   package f
+end
+
+#
+# Install Casks
+#
+homebrew_tap "phinze/cask"
+
+node["homebrew"]["casks"].each do |c|
+  homebrew_cask c
 end
