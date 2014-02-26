@@ -109,6 +109,12 @@ And then install the homebrew cask package before using this LWRP.
       action :uncask
     end
 
+    homebrew_cask "google-chrome" do
+      action :cask
+      options ['--appdir="~/Applications"', '--caskroom="/etc/Caskroom"']
+    end
+
+
 Default action is `:cask` which installs the Application binary . Use `:uncask` to
 uninstall a an Application.
 

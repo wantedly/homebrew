@@ -19,6 +19,9 @@
 # limitations under the License.
 #
 
-default['homebrew']['owner']    = nil
-default['homebrew']['formulas'] = []
-default['homebrew']['casks']    = []
+default['homebrew']['owner']                = nil
+default['homebrew']['formulas']             = []
+default['homebrew']['casks']                = []
+default['homebrew']['cask_install_options'] = [
+  '--appdir="~/Applications"'
+]

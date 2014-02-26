@@ -32,5 +32,8 @@ end
 homebrew_tap "phinze/cask"
 
 node["homebrew"]["casks"].each do |c|
-  homebrew_cask c
+  homebrew_cask c do
+    action :cask
+    options node["homebrew"]["cask_install_options"]
+  end
 end
