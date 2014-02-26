@@ -2,9 +2,9 @@
 # Author:: Joshua Timberman (<jtimberman@opscode.com>)
 # Author:: Graeme Mathieson (<mathie@woss.name>)
 # Cookbook Name:: homebrew
-# Attributes:: default
+# Recipes:: default
 #
-# Copyright 2011-2013, Opscode, Inc.
+# Copyright 2011-2014, Opscode, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,5 +19,6 @@
 # limitations under the License.
 #
 
-default['homebrew']['owner']    = nil
-default['homebrew']['formulas'] = []
+node["homebrew"]["formulas"].each do |f|
+  package f
+end
