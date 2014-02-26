@@ -21,3 +21,4 @@
 
 default['homebrew']['owner']    = nil
 default['homebrew']['formulas'] = []
+default['homebrew']['casks']    = []
