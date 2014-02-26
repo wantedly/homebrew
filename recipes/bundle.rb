@@ -23,7 +23,9 @@
 # Install Formulas
 #
 node["homebrew"]["formulas"].each do |f|
-  package f
+  package f do
+    action :upgrade
+  end
 end
 
 #
