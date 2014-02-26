@@ -7,6 +7,10 @@ attribute :name,
 attribute :casked,
   :kind_of => [TrueClass, FalseClass]
 
+attribute :options,
+  :kind_of => Array,
+  :default => []
+
 ### hax for default action
 def initialize( *args )
   super
